@@ -15,6 +15,8 @@ file = '/bryan_viewing.csv'
 
 df = pd.read_csv(directory + file)
 
+#clean data
+
 df['Show'] = df['Title'].str.split(':', -1, True)[0]
 df['Season'] = df['Title'].str.split(':', -1, True)[1]
 df['Episode'] = df['Title'].str.split(':', -1, True)[2]
